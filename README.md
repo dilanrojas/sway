@@ -5,4 +5,4 @@
 
 sudo pacman -S materia-gtk-theme arc-icon-theme grim slurp mako wofi thunar thunar-archive-plugin file-roller pulseaudio pavucontrol alsa-utils waybar alacritty sway xorg-xwayland ttf-jetbrains-mono-nerd
 
-yay -S qogir-cursor-theme-git
+yay -S qogir-cursor-theme-git sddm-theme-astronaut

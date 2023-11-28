@@ -1,0 +1,60 @@
+colors:
+    primary:
+      background: '#101010'
+      foreground: '#bbc2cf'
+    cursor:
+      text: CellBackground
+      cursor: '#528bff'
+    selection:
+      text: CellForeground
+      background: '#3e4451'
+    normal:
+      black:   '#1c1f24'
+      red:     '#ff6c6b'
+      green:   '#98be65'
+      yellow:  '#da8548'
+      blue:    '#51afef'
+      magenta: '#c678dd'
+      cyan:    '#5699af'
+      white:   '#202328'
+    bright:
+      black:   '#5b6268'
+      red:     '#da8548'
+      green:   '#4db5bd'
+      yellow:  '#ecbe7b'
+      blue:    '#3071db'
+      magenta: '#a9a1e1'
+      cyan:    '#46d9ff'
+      white:   '#dfdfdf'
+
+### FONTS ###
+
+font:
+  bold:
+    family: JetBrainsMono NF
+  italic:
+    family: JetBrainsMono NF
+  normal:
+    family: JetBrainsMono NF 
+    style: Regular
+  size: 11
+
+### CURSOR ###
+
+cursor:
+  style:
+    shape: Beam
+  blink_interval: 500
+  unfocused_hollow: true
+  thickness: 0.15
+  unfocused_hollow: true
+
+live_config_reload: true
+
+### WINDOW SETTINGS ###
+
+window:
+  padding:
+    y: 4
+    x: 4
+  opacity: .90 

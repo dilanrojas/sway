@@ -1,13 +1,13 @@
 {
     // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 37, // Waybar height (to be removed for auto height)
+    "height": 38, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio", "network",],
+    "modules-right": ["tray", "pulseaudio", "network", "custom/power"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -83,8 +83,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%d de %b  %I:%M %p}",
-        //"format-alt": "{:%d de %b  %I:%M %p}",
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%d de %b  %I:%M %p}",
     },
     "cpu": {
         "format": "{usage}% ",
@@ -133,7 +133,7 @@
         "format-alt": " {ifname}: {ipaddr}/{cidr} "
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 2, // %, can be a float
         "format": " {volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -162,5 +162,11 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
+    "custom/power": {
+        "format": " 󱐋 ",
+        "tooltip": false,
+        "on-click": "~/.config/scripts/power-menu.sh",
+    },
+
 }

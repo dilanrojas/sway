@@ -1,6 +1,6 @@
 colors:
     primary:
-      background: '#101010'
+      background: '#202020'
       foreground: '#bbc2cf'
     cursor:
       text: CellBackground
@@ -37,7 +37,7 @@ font:
   normal:
     family: JetBrainsMono NF 
     style: Regular
-  size: 11
+  size: 12
 
 ### CURSOR ###
 
@@ -57,4 +57,4 @@ window:
   padding:
     y: 4
     x: 4
-  opacity: .90 
+  opacity: .98 

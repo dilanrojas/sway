@@ -11,6 +11,8 @@ cp -r sway/.config/* ~/.config/
 
 chmod +x ~/.config/scripts/*
 
+sudo cp sway/rofi-power-menu /usr/bin/
+
 # Fuentes
 
 Jetbrains Nerd Font

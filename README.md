@@ -7,6 +7,10 @@ sudo pacman -S sway swaybg swayidle ristretto vlc materia-gtk-theme arc-icon-the
 
 yay -S qogir-cursor-theme-git sddm-theme-astronaut
 
+cp -r sway/.config/* ~/.config/
+
+chmod +x ~/.config/scripts/*
+
 # Fuentes
 
 Jetbrains Nerd Font

@@ -2,7 +2,7 @@
 # To view all configuration options.
 
 font=Cantarell 11
-format=<b>%a </b> %s\n%b
+format=<b>%a\n</b> %s\n%b
 sort=-time
 output=VGA-1
 layer=overlay

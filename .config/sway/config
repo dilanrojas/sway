@@ -1,9 +1,6 @@
 # ------ Sway ------ #
 
 # Windows
-default_border pixel 2
-default_floating_border pixel 2
-gaps inner 5
 
 # ------ Variables ------ #
 set $mod Mod4
@@ -11,26 +8,26 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $browser brave
+set $browser brave-browser
 set $filemng thunar
-set $screenshot bash /home/dilan/.config/sway/scripts/screenshot.sh
+set $screenshot bash ~/.config/scripts/screenshot.sh
 set $term alacritty
-set $menu wofi --show drun
+set $menu rofi -show drun
+set $powermenu ~/.config/scripts/power-menu.sh
 
 # Launch
-exec gsettings set org.gnome.desktop.interface gtk-theme 'Materia-dark'
+#exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 exec gsettings set.org.gnome.desktop.interface cursor-theme 'Qogir-cursors'  
-exec gsettings set org.gnome.desktop.interface icon-theme 'Arc' 
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' 
+exec /usr/libexec/polkit-mate-authentication-agent-1 &
 exec mako &
-##exec telegram-desktop -startintray &
 
 # Output/Input
-output * bg /usr/share/wallpapers/pixel5.jpg stretch
+output * bg /usr/share/wallpapers/gruvbox/gruvbox_astro.jpg fill
 output VGA-1 mode 1440x900@75Hz
 input "type:pointer" accel_profile flat
 input type:keyboard {
-    xkb_layout latam 
+    xkb_layout latam,us 
 }
 
 # ------ Keybindings ------ #
@@ -57,10 +54,29 @@ input type:keyboard {
     floating_modifier $mod normal
 
     # Reload config
-    bindsym $mod+Control+r reload
+    bindsym $mod+Control+r Reload
 
-    # Exit sway
-    bindsym $mod+Control+q exec 'swaymsg exit'
+    # Keyboard layout
+    bindsym $mod+Shift+Space input type:keyboard xkb_switch_layout next
+
+    # Powermenu
+    bindsym $mod+Shift+q exec $powermenu
+
+# ------ Volume ------ #
+
+    # Pamixer
+    bindsym $mod+F9 exec pamixer --mute
+    bindsym $mod+F10 exec pamixer --decrease 2
+    bindsym $mod+F11 exec pamixer --increase 2
+    bindsym $mod+F12 exec pamixer --unmute
+
+# ------ Music ------ #
+
+    # Playerctl
+    bindsym $mod+F7 exec playerctl play
+    bindsym $mod+F6 exec playerctl pause
+    bindsym $mod+F5 exec playerctl previous
+    bindsym $mod+F8 exec playerctl next
 
 # ------ Windows ------ #
 
@@ -91,11 +107,6 @@ input type:keyboard {
     bindsym $mod+Shift+3 move container to workspace number 3
     bindsym $mod+Shift+4 move container to workspace number 4
     bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-
 
 # ------ Layouts ------ #
 
@@ -138,6 +149,18 @@ input type:keyboard {
     bindsym $mod+Control+$down resize grow down 30px
     bindsym $mod+Control+$up resize grow up 30px
     bindsym $mod+Control+$right resize grow right 30px
+
+# ------ Borders ------ #
+default_border pixel 2
+default_floating_border pixel 2
+gaps inner 6
+
+#client.<class>          <border>    <background>   <text>      <indicator>   <child_border> 
+client.focused           "#2c2c2c"   "#dddfe2"      "#000000"   "#80bf83"     "#689d6a"
+
+#client.focused_inactive "#23242a"   "#ffffff"      "#666666"   "#000000"     "#999999"
+
+#client.unfocused        "#666666"   "#fff5e5"      "#666666"   "#000000"     "#999999"
 
 # ------ Status Bar ------ #
 bar { 

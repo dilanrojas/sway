@@ -10,4 +10,5 @@ yay -S qogir-cursor-theme-git sddm-theme-astronaut
 # Fuentes
 
 Jetbrains Nerd Font
+
 FontAweomse

@@ -1,10 +1,10 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    margin-top: 1px;
-    margin-left: 1px;
-    margin-right: 1px;
+    font-family: "Cantarell Bold";
+    font-size: 15px;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 window#waybar {
@@ -277,6 +277,7 @@ label:focus {
 
 #scratchpad {
     background-color: rgba(0, 0, 0, 0.781);
+    border-radius: 10px;
 }
 
 #scratchpad.empty {

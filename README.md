@@ -3,18 +3,21 @@
 
 # Instalación
 
-sudo pacman -S sway swaybg swayidle ristretto vlc materia-gtk-theme arc-icon-theme grim slurp mako rofi thunar thunar-archive-plugin file-roller pulseaudio pavucontrol alsa-utils waybar alacritty sway xorg-xwayland ttf-jetbrains-mono-nerd
+sudo pacman -S sway swaybg swayidle eog mpv materia-gtk-theme papirus-icon-theme grim slurp mako rofi thunar thunar-archive-plugin file-roller pulseaudio pavucontrol alsa-utils waybar alacritty sway xorg-xwayland ttf-jetbrains-mono-nerd starship fish polkit-gnome
 
 yay -S qogir-cursor-theme-git sddm-theme-astronaut
 
 cp -r sway/.config/* ~/.config/
 
 chmod +x ~/.config/scripts/*
+sudo usermod --shell /usr/bin/fish $USER
+sudo usermod --shell /usr/bin/fish root
 
 sudo cp sway/rofi-power-menu /usr/bin/
+sudo chmod +x /usr/bin/rofi-power-menu
 
 # Fuentes
 
 Jetbrains Nerd Font
 
-FontAweomse
+Font Awesome

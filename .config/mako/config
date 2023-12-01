@@ -2,18 +2,18 @@
 # To view all configuration options.
 
 font=Cantarell 11
-format=<b>%a\n</b> %s\n%b
+format=<b>%a\n</b>\n%s\n%b
 sort=-time
 output=VGA-1
 layer=overlay
 anchor=top-right
-background-color=#070707
+background-color=#191919
 width=237
 height=150
 margin=5
 padding=0,5,10
 border-size=2
-border-color=#101010
+border-color=#181818
 border-radius=10
 icons=0
 max-icon-size=32
@@ -21,7 +21,7 @@ default-timeout=5000
 ignore-timeout=1
 
 [urgency=normal]
-border-color=#070707
+border-color=#181818
 
 [urgency=high]
 border-color=#bf616a

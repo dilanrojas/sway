@@ -1,33 +1,40 @@
 # ------ Sway ------ #
 
-# Windows
-
 # ------ Variables ------ #
 set $mod Mod4
 set $left h
 set $down j
 set $up k
 set $right l
-set $browser brave-browser
+set $browser brave
 set $filemng thunar
 set $screenshot bash ~/.config/scripts/screenshot.sh
 set $term alacritty
 set $menu rofi -show drun
 set $powermenu ~/.config/scripts/power-menu.sh
+set $youtube /opt/brave-bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml
+set $gmail /opt/brave-bin/brave --profile-directory=Default --app-id=fmgjjmmmlfnkbppncabfkddbjimcfncm
+set $vscode env GTK_THEME=Mint-Y-Dark /usr/bin/code
 
 # Launch
-#exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-exec gsettings set.org.gnome.desktop.interface cursor-theme 'Qogir-cursors'  
-exec gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' 
-exec /usr/libexec/polkit-mate-authentication-agent-1 &
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Mint-Y-Dark-Sand'
+    gsettings set $gnome-schema icon-theme 'Mint-L-Sand'
+    gsettings set $gnome-schema cursor-theme 'Qogir-white-cursors'
+    gsettings set $gnome-schema font-name 'Cantarell 12'
+}
+
+exec /usr/libexec/polkit-gnome-authentication-agent-1 & 
 exec mako &
 
 # Output/Input
-output * bg /usr/share/wallpapers/gruvbox/gruvbox_astro.jpg fill
+output * bg /usr/share/wallpapers/gruvbox-forest.jpg fill
 output VGA-1 mode 1440x900@75Hz
 input "type:pointer" accel_profile flat
 input type:keyboard {
-    xkb_layout latam,us 
+  xkb_layout latam,us    
 }
 
 # ------ Keybindings ------ #
@@ -44,8 +51,13 @@ input type:keyboard {
     # File manager
     bindsym $mod+e exec $filemng
 
+    # VS Code
+    bindsym $mod+Shift+v exec $vscode
+
     # Browser
     bindsym $mod+b exec $browser
+    bindsym $mod+y exec $youtube
+    bindsym $mod+g exec $gmail
 
     # Screenshot
     bindsym $mod+Shift+s exec $screenshot
@@ -118,8 +130,8 @@ input type:keyboard {
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    #bindsym $mod+s layout stacking
+    bindsym $mod+t layout tabbed
     bindsym $mod+u layout toggle split
 
     # Toggle fullscreen
@@ -156,7 +168,7 @@ default_floating_border pixel 2
 gaps inner 6
 
 #client.<class>          <border>    <background>   <text>      <indicator>   <child_border> 
-client.focused           "#2c2c2c"   "#dddfe2"      "#000000"   "#80bf83"     "#689d6a"
+client.focused           "#2c2c2c"   "#dddfe2"      "#000000"   "#808080"     "#606060"
 
 #client.focused_inactive "#23242a"   "#ffffff"      "#666666"   "#000000"     "#999999"
 

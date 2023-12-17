@@ -35,6 +35,11 @@ Temas:
 yay -S sddm-theme-astronaut catppuccin-gtk-theme-mocha
 ```
 
+```bash
+sudo pacman -S npm python-virtualenv
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+```
+
 Directorios necesarios:
 
 ```bash
@@ -57,12 +62,6 @@ cp -r sway/.config/ ~/
 cp -r sway/.local/ ~/
 sudo cp -r sway/sddm/ /usr/share/
 sudo chmod +x sway/rofi-power-menu && sudo cp sway/rofi-power-menu /usr/bin/
-```
-
-Tema de NeoVim:
-
-```bash
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ```
 
 Wallpapers:

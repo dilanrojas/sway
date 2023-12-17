@@ -47,12 +47,12 @@
     },
     "clock": {
         "tooltip-format": "<tt>{calendar}</tt>",
-        "format-alt": "   {:%a, %d %b %Y}",
-        "format": "   {:%I:%M %p}"
+        "format-alt": "   {:%d de %B, %Y}",
+        "format": "   {:%I:%M %p}"
     },
     "memory": {
         "interval": 5,
-        "format": "󰍛   {}%",
+        "format": "   {}%",
         "max-length": 10
     },
     "network": {
@@ -72,12 +72,13 @@
         "format-bluetooth": "󰂰",
         "nospacing": 1,
         "tooltip-format": "Volume : {volume}%",
-        "format-muted": "󰝟",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
-            "default": ["󰖀","󰕾",""]
+            "default": ["","",""]
         },
-        "on-click": "pavucontrol",
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
         "scroll-step": 1
     },
     "custom/power": {

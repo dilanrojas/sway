@@ -87,7 +87,7 @@
         "on-click": "~/.config/scripts/power-menu.sh",
     },
     "custom/logo": {
-        "format": " 󰣇 ",
+        "format": "󰣇 ",
         "tooltip": false,
         "on-click": "alacritty -e sudo pacman -Syu",
     },

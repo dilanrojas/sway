@@ -6,12 +6,12 @@
     "modules-left": [
         "custom/logo",
         "sway/workspaces",
-        "sway/scratchpad"
     ],
     "modules-center": [
-        "clock"
+        "clock",
     ],
     "modules-right": [
+        "sway/scratchpad",
         "tray",
         "memory",
         "pulseaudio",
@@ -37,7 +37,7 @@
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": ["", "  "],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },

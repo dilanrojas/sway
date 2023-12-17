@@ -12,8 +12,7 @@
 Dependencias:
 
 ```bash
-sudo pacman -S sddm xorg-xwayland pulseaudio pavucontrol alsa-utils sway swayidle swaybg waybar alacritty 
-xdg-user-dirs lxappearance thunar thunar-archive-plugin pamixer playerctl glib2 gvfs-mtp ntfs-3g rofi mako git grim slurp polkit-gnome papirus-icon-theme fish starship lsd bat ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts
+sudo pacman -S sddm xorg-xwayland pulseaudio pavucontrol alsa-utils sway swayidle swaybg waybar alacritty xdg-user-dirs lxappearance thunar thunar-archive-plugin pamixer playerctl glib2 gvfs-mtp ntfs-3g rofi mako git grim slurp polkit-gnome papirus-icon-theme fish starship lsd bat ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts
 ```
 
 Habilitar servicio de SDDM:

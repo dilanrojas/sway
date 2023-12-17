@@ -1,7 +1,6 @@
 # Sway
 
-![screenshot-2023-12-17-11:24:18](https://github.com/dilanrojas/sway/assets/99371498/01c86071-e24d-4001-9446-6c349c567f32)
-
+![screenshot-2023-12-17-15:37:24](https://github.com/dilanrojas/sway/assets/99371498/0b8af146-184c-46ea-bd37-df39c6ff05ff)
 
 # Contenidos
 - [Programas y configuraciones](#programas-y-configuraciones)

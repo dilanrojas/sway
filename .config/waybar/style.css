@@ -69,7 +69,7 @@ window#waybar.hidden {
 
 #custom-logo {
   padding-right: 7px;
-  padding-left: 7px;
+  padding-left: 10px;
   margin-left: 5px;
   font-size: 18px;
   border-radius: 8px 0px 0px 8px;

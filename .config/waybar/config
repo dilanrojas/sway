@@ -89,6 +89,6 @@
     "custom/logo": {
         "format": "󰣇 ",
         "tooltip": false,
-        "on-click": "alacritty -e sudo pacman -Syu",
+        "on-click": "rofi -show drun",
     },
 }

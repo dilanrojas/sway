@@ -52,6 +52,7 @@ window#waybar.hidden {
 #custom-power,
 #battery,
 #backlight,
+#scratchpad,
 #pulseaudio,
 #network,
 #clock,
@@ -76,35 +77,12 @@ window#waybar.hidden {
   color: #1793d1;
 }
 
+#scratchpad {
+  background-color: transparent;
+  color: #cdd6f4;
+}
+
 #memory {
-  background-color: #fab387;
-}
-#battery {
-  background-color: #f38ba8;
-}
-@keyframes blink {
-  to {
-    background-color: #f38ba8;
-    color: #181825;
-  }
-}
-
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-  background-color: #ff0048;
-  color: #181825;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-#battery.charging {
-  background-color: #a6e3a1;
-}
-
-#backlight {
   background-color: #fab387;
 }
 

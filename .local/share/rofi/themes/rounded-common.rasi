@@ -5,7 +5,19 @@
  *******************************************************************************/
 
 * {
-    font:   "Libertaion Sans 14";
+    bg0:    #181825;
+    bg1:    #1e1e2e;
+    bg2:    #3D3D3D80;
+    bg3:    #597ebb;
+    fg0:    #E6E6E6;
+    fg1:    #FFFFFF;
+    fg2:    #969696;
+    fg3:    #3D3D3D;
+}
+
+
+* {
+    font:   "Liberation Sans 14";
 
     background-color:   transparent;
     text-color:         @fg0;

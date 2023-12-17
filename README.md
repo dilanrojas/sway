@@ -32,7 +32,7 @@ makepkg -si --noconfirm
 Temas:
 
 ```bash
-yay -S sddm-theme-astronaut catppuccin-gtk-theme-mocha
+yay -S sddm-theme-astronaut catppuccin-gtk-theme-mocha fluent-cursor-theme-git
 ```
 
 ```bash

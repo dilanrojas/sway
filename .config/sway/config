@@ -20,9 +20,9 @@ set $vscode env GTK_THEME=Mint-Y-Dark /usr/bin/code
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Mint-Y-Dark-Sand'
-    gsettings set $gnome-schema icon-theme 'Mint-L-Sand'
-    gsettings set $gnome-schema cursor-theme 'Qogir-white-cursors'
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Blue-Dark'
+    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+    gsettings set $gnome-schema cursor-theme 'Adwaita'
     gsettings set $gnome-schema font-name 'Cantarell 12'
 }
 
@@ -30,7 +30,7 @@ exec /usr/libexec/polkit-gnome-authentication-agent-1 &
 exec mako &
 
 # Output/Input
-output * bg /usr/share/wallpapers/gruvbox-forest.jpg fill
+output * bg /usr/share/wallpapers/moca/misc/cat_pacman.png center 
 output VGA-1 mode 1440x900@75Hz
 input "type:pointer" accel_profile flat
 input type:keyboard {
@@ -78,8 +78,8 @@ input type:keyboard {
 
     # Pamixer
     bindsym $mod+F9 exec pamixer --mute
-    bindsym $mod+F10 exec pamixer --decrease 2
-    bindsym $mod+F11 exec pamixer --increase 2
+    bindsym $mod+F10 exec pamixer --decrease 5
+    bindsym $mod+F11 exec pamixer --increase 5
     bindsym $mod+F12 exec pamixer --unmute
 
 # ------ Music ------ #
@@ -168,11 +168,11 @@ default_floating_border pixel 2
 gaps inner 6
 
 #client.<class>          <border>    <background>   <text>      <indicator>   <child_border> 
-client.focused           "#2c2c2c"   "#dddfe2"      "#000000"   "#808080"     "#606060"
+client.focused           "#2c2c2c"   "#dddfe2"      "#000000"   "#8598d7"     "#8598d7"
 
-#client.focused_inactive "#23242a"   "#ffffff"      "#666666"   "#000000"     "#999999"
+client.focused_inactive  "#23242a"   "#ffffff"      "#000000"   "#202020"     "#202020"
 
-#client.unfocused        "#666666"   "#fff5e5"      "#666666"   "#000000"     "#999999"
+client.unfocused         "#666666"   "#fff5e5"      "#000000"   "#202020"     "#202020"
 
 # ------ Status Bar ------ #
 bar { 

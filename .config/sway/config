@@ -12,9 +12,12 @@ set $screenshot bash ~/.config/scripts/screenshot.sh
 set $term alacritty
 set $menu rofi -show drun
 set $powermenu ~/.config/scripts/power-menu.sh
-set $youtube /opt/brave-bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml
-set $gmail /opt/brave-bin/brave --profile-directory=Default --app-id=fmgjjmmmlfnkbppncabfkddbjimcfncm
-set $vscode env GTK_THEME=Mint-Y-Dark /usr/bin/code
+
+# ------ Effects ------ #
+blur disable
+corner_radius 8
+shadows enable
+layer_effects "waybar" shadows enable;
 
 # Launch
 set $gnome-schema org.gnome.desktop.interface
@@ -30,8 +33,8 @@ exec /usr/libexec/polkit-gnome-authentication-agent-1 &
 exec mako &
 
 # Output/Input
-output * bg /usr/share/wallpapers/cat_pacman.png center 
-#output VGA-1 mode 1440x900@75Hz
+output * bg /usr/share/wallpapers/moca/misc/cat_pacman.png center 
+output VGA-1 mode 1440x900@75Hz
 input "type:pointer" accel_profile flat
 input type:keyboard {
   xkb_layout latam,us    
@@ -52,12 +55,10 @@ input type:keyboard {
     bindsym $mod+e exec $filemng
 
     # VS Code
-    bindsym $mod+Shift+v exec $vscode
+    bindsym $mod+Shift+v exec vscodium
 
     # Browser
     bindsym $mod+b exec $browser
-    bindsym $mod+y exec $youtube
-    bindsym $mod+g exec $gmail
 
     # Screenshot
     bindsym $mod+Shift+s exec $screenshot

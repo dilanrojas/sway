@@ -73,7 +73,7 @@
         "format-bluetooth": "󰂰",
         "nospacing": 1,
         "tooltip-format": "Volume : {volume}%",
-        "format-muted": "",
+        "format-muted": "  ",
         "format-icons": {
             "headphone": "",
             "default": ["","",""]

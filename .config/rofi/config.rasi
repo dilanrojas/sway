@@ -6,4 +6,4 @@ configuration {
 //@theme "/home/dilan/.local/share/rofi/themes/mytheme.rasi"
 //@theme "/home/dilan/.local/share/rofi/themes/rounded-blue-dark.rasi"
 //@theme "/home/dilan/.local/share/rofi/themes/rounded-blue-dark.rasi"
-@theme "/home/dilan/.local/share/rofi/themes/rounded-gruvbox.rasi"
+@theme "/home/dilan/.local/share/rofi/themes/rounded.rasi"

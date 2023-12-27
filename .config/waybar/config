@@ -13,7 +13,7 @@
     "modules-right": [
         "sway/scratchpad",
         "tray",
-        "memory",
+        "sway/language",
         "pulseaudio",
         "network",
         "custom/power"
@@ -45,16 +45,15 @@
         "icon-size": 16,
         "spacing": 10
     },
+    "sway/language": {
+  	  "format": "    {short}",
+      "tooltip": false,
+      "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+    },
     "clock": {
         "tooltip-format": "<tt>{calendar}</tt>",
         "format-alt": "   {:%d de %B, %Y}",
         "format": "   {:%I:%M %p}"
-    },
-    "memory": {
-        "interval": 5,
-        "format": "   {}%",
-        "max-length": 10,
-        "on-click": "alacritty -e htop",
     },
     "network": {
         "format-wifi" : " {icon} ",
@@ -69,17 +68,19 @@
       	"nospacing": 1,
     },
     "pulseaudio": {
-        "format": "{icon}   {volume}%",
+        "format": " {icon} ",
         "format-bluetooth": "󰂰",
         "nospacing": 1,
-        "tooltip-format": "Volume : {volume}%",
+        "tooltip": false,
         "format-muted": "  ",
         "format-icons": {
             "headphone": "",
             "default": ["","",""]
         },
-        "on-click": "pamixer -t",
+        "on-click": "pamixer -t && python3 ~/.config/scripts/volume.py",
         "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer --increase 5 && python3 ~/.config/scripts/volume.py &",
+        "on-scroll-down": "pamixer --decrease 5 && python3 ~/.config/scripts/volume.py &",
         "scroll-step": 5
     },
     "custom/power": {

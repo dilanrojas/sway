@@ -48,7 +48,7 @@ window#waybar.hidden {
   background-color: #f38ba8;
 }
 
-#memory,
+#language,
 #custom-power,
 #battery,
 #backlight,
@@ -82,7 +82,7 @@ window#waybar.hidden {
   color: #cdd6f4;
 }
 
-#memory {
+#language {
   background-color: #fab387;
 }
 

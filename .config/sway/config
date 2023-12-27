@@ -33,7 +33,7 @@ exec /usr/libexec/polkit-gnome-authentication-agent-1 &
 exec mako &
 
 # Output/Input
-output * bg /usr/share/wallpapers/moca/misc/cat_pacman.png center 
+output * bg /usr/share/wallpapers/cat_pacman.png center 
 #output VGA-1 mode 1440x900@75Hz
 input "type:pointer" accel_profile flat
 input type:keyboard {

@@ -77,11 +77,14 @@ input type:keyboard {
 
 # ------ Volume ------ #
 
+    # Volume script
+    set $volume python3 ~/.config/scripts/volume.py
+
     # Pamixer
-    bindsym $mod+F9 exec pamixer --mute
-    bindsym $mod+F10 exec pamixer --decrease 5
-    bindsym $mod+F11 exec pamixer --increase 5
-    bindsym $mod+F12 exec pamixer --unmute
+    bindsym $mod+F9 exec pamixer --mute && $volume
+    bindsym $mod+F10 exec pamixer --decrease 5 && $volume
+    bindsym $mod+F11 exec pamixer --increase 5 && $volume
+    bindsym $mod+F12 exec pamixer --unmute && $volume
 
 # ------ Music ------ #
 

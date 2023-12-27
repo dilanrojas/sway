@@ -1,9 +1,5 @@
 configuration {
   show-icons: true;
 }
-//@theme "/home/dilan/.local/share/rofi/themes/onedark.rasi"
-//@theme "/home/dilan/.local/share/rofi/themes/rounded-blue-dark.rasi"
-//@theme "/home/dilan/.local/share/rofi/themes/mytheme.rasi"
-//@theme "/home/dilan/.local/share/rofi/themes/rounded-blue-dark.rasi"
-//@theme "/home/dilan/.local/share/rofi/themes/rounded-blue-dark.rasi"
-@theme "/home/dilan/.local/share/rofi/themes/rounded.rasi"
+
+@theme "~/.local/share/rofi/themes/rounded.rasi"

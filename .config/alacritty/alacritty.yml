@@ -628,6 +628,6 @@ live_config_reload: true
 
 window:
   padding:
-    y: 4
-    x: 4
+    y: 8
+    x: 8
   opacity: 1.0 

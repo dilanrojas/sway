@@ -1,22 +1,33 @@
+# Imports
 import subprocess
 import os
 
+# Get Volume
 def get_volume_info():
-    try:
-        # Run the pamixer command to get volume information
         result = subprocess.run(['pamixer', '--get-volume'], capture_output=True, text=True, check=True)
-
-        # Extract the volume information from the command output
         volume_info = result.stdout.strip()
-
         return volume_info
-    except subprocess.CalledProcessError as e:
-        # Handle any errors that occurred during the command execution
-        print(f"Error: {e}")
-        return None
 
-# Get volume
+# Get mute info
+def get_mute_info():
+        mute = subprocess.run(['pamixer', '--get-mute'], capture_output=True, text=True, check=True)
+        mute_info = mute.stdout.strip()
+        return mute_info
+
+# States
 volume = get_volume_info()
-icon = os.path.expanduser('~/.local/share/icons/fontawesome/volume.svg ')
+mute = get_mute_info()
 
-os.system("dunstify -a 'volume' -r 9993 -u low -h int:value:"+volume +" -i " + icon + volume + "% -t 1500 && play /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+# Path to icons
+icon = os.path.expanduser('~/.local/share/icons/fontawesome/volume.svg ')
+icon_muted = os.path.expanduser('~/.local/share/icons/fontawesome/volume_mute.svg ')
+
+# Notification
+if mute == 'false':
+    # Unmuted
+    os.system("dunstify -a 'volume' -r 9993 -u low -h int:value:"+volume +" -i " + icon + volume + "% -t 1500")
+    # Play a volume test sound
+    os.system("play /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+else:
+    # Muted 
+    os.system("dunstify -a 'volume' -r 9993 -u low -h int:value:"+volume +" -i " + icon_muted + volume + "% -t 1500")

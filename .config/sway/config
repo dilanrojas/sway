@@ -15,7 +15,7 @@ set $powermenu ~/.config/scripts/power-menu.sh
 
 # ------ Effects ------ #
 blur disable
-corner_radius 8
+#corner_radius 8
 shadows enable
 layer_effects "waybar" shadows enable;
 
@@ -167,9 +167,9 @@ input type:keyboard {
     bindsym $mod+Control+$right resize grow right 30px
 
 # ------ Borders ------ #
-default_border pixel 2
-default_floating_border pixel 2
-gaps inner 6
+default_border pixel 1
+default_floating_border pixel 1
+gaps inner 8
 
 #client.<class>          <border>    <background>   <text>      <indicator>   <child_border> 
 client.focused           "#2c2c2c"   "#dddfe2"      "#000000"   "#8598d7"     "#8598d7"

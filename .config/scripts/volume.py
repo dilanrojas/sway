@@ -19,8 +19,8 @@ volume = get_volume_info()
 mute = get_mute_info()
 
 # Path to icons
-icon = os.path.expanduser('~/.local/share/icons/fontawesome/volume.svg ')
-icon_muted = os.path.expanduser('~/.local/share/icons/fontawesome/volume_mute.svg ')
+icon = os.path.expanduser('~/.local/share/icons/fontawesome/volume.png ')
+icon_muted = os.path.expanduser('~/.local/share/icons/fontawesome/volume_mute.png ')
 
 # Notification
 if mute == 'false':

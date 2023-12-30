@@ -88,6 +88,8 @@ window#waybar.hidden {
 
 #pulseaudio {
   background-color: #f9e2af;
+  font-family: "JetBrainsMono NF";
+  font-size: 1rem;
 }
 
 #network {
@@ -102,7 +104,13 @@ window#waybar.hidden {
 #custom-power {
   background-color: #f2cdcd;
 }
-
+.custom-spotify {
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+  background-color: #cba6f7;
+  color: #181825; 
+}
 
 tooltip {
 border-radius: 8px;

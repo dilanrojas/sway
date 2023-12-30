@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 34,
+    "height": 46,
     "spacing": 0,
     "modules-left": [
         "custom/logo",
@@ -16,7 +16,7 @@
         "sway/language",
         "pulseaudio",
         "network",
-        "custom/power"
+        "custom/power",
     ],
     "sway/workspaces": {
         "disable-scroll": true,
@@ -72,10 +72,10 @@
         "format-bluetooth": "󰂰",
         "nospacing": 1,
         "tooltip": false,
-        "format-muted": "  ",
+        "format-muted": " 󰝟 ",
         "format-icons": {
             "headphone": "",
-            "default": ["","",""]
+            "default": ["󰕿","󰖀","󰕾"]
         },
         "on-click": "pamixer -t && python3 ~/.config/scripts/volume.py",
         "on-click-right": "pavucontrol",
@@ -92,5 +92,13 @@
         "format": "󰌽 ",
         "tooltip": false,
         "on-click": "rofi -show drun",
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 ~/.config/scripts/mediaplayer.py --player spotify",
+        "format": "{}  ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
     },
 }

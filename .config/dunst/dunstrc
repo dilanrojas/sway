@@ -4,8 +4,8 @@
     follow = none
 
     ### Geometry ###
-    width = (0, 500)
-    height = 500
+    width = (0, 350)
+    height = 400
     origin = top-right
     offset = 3x3
     scale = 0
@@ -19,14 +19,13 @@
     progress_bar_min_width = 250
     progress_bar_max_width = 500
     progress_bar_corner_radius = 5
-    icon_corner_radius = 0
+    icon_corner_radius = 0 
     indicate_hidden = yes
     transparency = 0
     separator_height = 2
     padding = 10
     horizontal_padding = 10
     text_icon_padding = 10
-    frame_width = 2
     frame_color = "#49496b"
     gap_size = 2
     separator_color = frame
@@ -44,14 +43,14 @@
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
-    show_indicators = yes
+    show_indicators = false
 
     ### Icons ###
     enable_recursive_icon_lookup = true
     icon_theme = Adwaita
     icon_position = left
     min_icon_size = 24
-    max_icon_size = 128
+    max_icon_size = 64
     icon_path = ~/.local/share/icons/fontawesome/
 
     ### History ###
@@ -64,7 +63,8 @@
     always_run_script = true
     title = Dunst
     class = Dunst
-    corner_radius = 5
+    frame_width = 1
+    corner_radius = 0
     ignore_dbusclose = false
 
     ### Wayland ###

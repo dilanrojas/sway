@@ -22,7 +22,7 @@ yay -S swayfx-git
 ```
 
 ```bash
-sudo pacman -S sddm xorg-xwayland pulseaudio pavucontrol alsa-utils swayidle swaybg waybar alacritty xdg-user-dirs lxappearance thunar thunar-archive-plugin file-roller unzip pamixer playerctl glib2 gvfs-mtp ntfs-3g rofi dunst git grim slurp polkit-gnome papirus-icon-theme fish starship lsd bat ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts otf-font-awesome
+sudo pacman -S sddm xorg-xwayland pulseaudio pavucontrol alsa-utils swayidle swaybg waybar alacritty xdg-user-dirs lxappearance thunar thunar-archive-plugin file-roller unzip pamixer playerctl glib2 gvfs-mtp ntfs-3g rofi dunst git grim slurp polkit-gnome papirus-icon-theme fish starship lsd bat ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts otf-font-awesome sox
 ```
 
 Habilitar servicio de SDDM:

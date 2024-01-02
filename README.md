@@ -64,6 +64,7 @@ cp -r sway/.config/ ~/
 cp -r sway/.local/ ~/
 sudo cp -r sway/sddm/ /usr/share/
 sudo chmod +x sway/rofi-power-menu && sudo cp sway/rofi-power-menu /usr/bin/
+chmod +x ~/.config/scripts/*
 ```
 
 Wallpapers:
